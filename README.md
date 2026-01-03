@@ -1,5 +1,5 @@
 # brucellosis-canids-seroprevalence
-Misclassification-aware estimation of Brucella seroprevalence in wild canids
+# Misclassification-aware estimation of Brucella seroprevalence in wild canids
 
 import os
 import argparse
@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # Publication-quality DPI
 PLOT_DPI = 300
 
-# Duplicate and label key figures
+#  label key figures
 IMPORTANT_FIGS = {
     'forest_plot.png',
     'overall_true_prevalence.png',
@@ -48,19 +48,7 @@ plt.savefig = _savefig_pub
 
 np.random.seed(42)
 
-SERUM_METHODS = {
-    'RBT','ELISA','CFT','SAT','BPAT','RIV','AGID','2-ME','IFA','FPA','ICT','CIE','CIEF'
-}
 
-ALIASES = {
-    'CARD':'RBT','RB':'RBT','RBCT':'RBT','ROSE BENGAL':'RBT',
-    'BBA':'BPAT','BAPAT':'BPAT',
-    '2ME':'2-ME','2-ME ':'2-ME','ME-2':'2-ME',
-    'CIEP':'CIE','CIEF':'CIE','IFAT':'IFA',
-    'ICT ':'ICT','LFA':'ICT',
-    'AGID ':'AGID','AGPT':'AGID','FPA ':'FPA'
-}
-EXCLUDE_METHODS = {'CULTURE','PCR','QPCR','RT-PCR','MOLECULAR','SEQUENCING'}
 
 
 # Priors (mean, sd) for sensitivity/specificity by method (modify if you have better test meta-analyses)
